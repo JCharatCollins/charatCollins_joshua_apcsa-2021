@@ -3,21 +3,28 @@
 
 //Name - Joshua Charat-Collins
 //Date - 1/28/2021
-//Class - 
-//Lab  -
+//Class - AP CSA
+//Lab  - Unit 0 ASCII Art
 
 public class AsciiArt
 {
 	public static void main ( String[] args )
 	{
-		System.out.println("Your Name \n\n" );
-		System.out.println("What type of ANIMAL YOU WILL DRAW" );
+		System.out.println("Joshua Charat-Collins \n\n" );
+		System.out.println("Dog" );
 		System.out.println("\n\n\n\n" );
 
-		System.out.println("                /\\                " );
-		System.out.println("               /  \\               " );
-		System.out.println("              /    \\              " );
-		System.out.println("             [------]             " );
+		System.out.println("░░░░░░░░░░░░░░░░░░░░" );
+		System.out.println("░▄▀▄▀▀▀▀▄▀▄░░░░░░░░░" );
+		System.out.println("░█░░░░░░░░▀▄░░░░░░▄░" );
+		System.out.println("█░░▀░░▀░░░░░▀▄▄░░█░█" );
+		System.out.println("█░▄░█▀░▄░░░░░░░▀▀░░█" );
+		System.out.println("█░░▀▀▀▀░░░░░░░░░░░░█" );
+		System.out.println("█░░░░░░░░░░░░░░░░░░█" );
+		System.out.println("█░░░░░░░░░░░░░░░░░░█" );
+		System.out.println("░█░░▄▄░░▄▄▄▄░░▄▄░░█░" );
+		System.out.println("░█░▄▀█░▄▀░░█░▄▀█░▄▀░" );
+		System.out.println("░░▀░░░▀░░░░░▀░░░▀░░░" );
 		//add other output
 
 		System.out.println(" \n\n\n\nHelpFul Hints" );
