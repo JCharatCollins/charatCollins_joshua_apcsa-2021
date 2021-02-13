@@ -14,6 +14,12 @@ public class StringExplorer
 		String sample = "The quick brown fox jumped over the lazy dog.";
 		
 		//  Demonstrate the indexOf method.
+		int pos = sample.indexOf("slow");
+		if (pos != -1)
+			System.out.println("slow is found at position " + pos);
+		else
+			System.out.println("slow is not found");
+				
 		int position = sample.indexOf("quick");
 		System.out.println ("sample.indexOf(\"quick\") = " + position);
 		
@@ -23,6 +29,14 @@ public class StringExplorer
 		System.out.println ("After toLowerCase(), sample = " + sample);
 		
 		//  Try other methods here:
+		String sample2 = "Computer science is the best, the greatest, and the most wonderful subject to study!";
+		
+		for (int i = 0; i < sample2.length(); i++) {
+			if (sample2.indexOf("the", i) != -1) {
+				System.out.println("There is an instance of \"the\" at " + sample2.indexOf("the", i));
+				i = sample2.indexOf("the", i);
+			}
+		}
 
 	}
 

@@ -46,9 +46,17 @@ public class Magpie3
 				|| findKeyword(statement, "brother") >= 0)
 		{
 			response = "Tell me more about your family.";
-		}
-		else
-		{
+		} else if (findKeyword(statement, "dog") >= 0 || findKeyword(statement, "cat") >= 0){
+			response = "Tell me more about your pets.";
+		} else if (findKeyword(statement, "mauro") >= 0){
+			response = "Mr. Mauro is a cool dude.";
+		} else if (findKeyword(statement, "joshua") >= 0 || findKeyword(statement, "josh") >= 0){
+			response = "Josh is a cool dude.";
+		} else if (findKeyword(statement, "guitar") >= 0) {
+			response = "Guitar is the best instrument";
+		} else if (findKeyword(statement, "632146S,P,K,S,HS,D,K,S,632146HS") >= 0) {
+			response = "DESTROYED!";
+		} else {
 			response = getRandomResponse();
 		}
 		return response;
