@@ -31,9 +31,13 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		cards = new Card[ranks.length];
-		for (int i = 0; i < ranks.length; i++) {
-			cards[i] = new Card(ranks[i], suits[i], values[i]);
+		cards = new Card[ranks.length*suits.length];
+		int k = 0;
+		for (int i = 0; i < suits.length; i++) {
+			for (int j = 0; j < ranks.length; j++) {
+				System.out.println("" + ranks[j] + " " + suits[i] + " " + values[j]);
+				cards[k++] = new Card(ranks[j], suits[i], values[j]);
+			}
 		}
 		shuffle();
 	}
