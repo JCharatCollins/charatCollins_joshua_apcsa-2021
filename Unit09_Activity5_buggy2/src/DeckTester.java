@@ -9,8 +9,8 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		test2CardDeck();
 		test1CardDeck();
+		test2CardDeck();
 		testShuffle();
 		System.out.println("All tests passed!");
 	}
@@ -40,6 +40,10 @@ public class DeckTester {
 		String[] s2 = {"hearts"};
 		int[] v2 = {1, 2, 3};
 		Deck d = new Deck(r2, s2, v2);
+		Card a = d.deal();
+		a = d.deal();
+		a = d.deal();
+		assert a != null : "A";
 		assert d.size() == 3 : "Initial size is " + d.size()
 			+ ". It should be 3.";
 		assert !d.isEmpty() : "Initial deck is empty.";
