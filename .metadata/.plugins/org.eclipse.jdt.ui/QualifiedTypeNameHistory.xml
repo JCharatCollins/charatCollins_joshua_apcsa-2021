@@ -10,4 +10,5 @@
 <fullyQualifiedTypeName name="javax.swing.event.ListSelectionEvent"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
