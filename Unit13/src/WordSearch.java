@@ -22,7 +22,24 @@ public class WordSearch
 
     public boolean isFound( String word )
     {
-    	return checkRight(word, 0, 0);
+    	for (int i = 0; i < m.length; i++) {
+    		for (int j = 0; j < m[i].length; j++) {
+    			if (
+    					checkRight(word, i, j) ||
+    					checkUp(word, i, j) ||
+    					checkDown(word, i, j) ||
+    					checkLeft(word, i, j) ||
+    					checkDiagUpRight(word, i, j) || 
+    					checkDiagUpLeft(word, i, j) || 
+    					checkDiagDownLeft(word, i, j) || 
+    					checkDiagDownRight(word, i, j)
+
+    				) {
+    				return true;
+    			}
+    		}
+    	}
+    	return false;
     }
 
 	public boolean checkRight(String w, int r, int c)
@@ -42,38 +59,117 @@ public class WordSearch
 
 	public boolean checkLeft(String w, int r, int c)
 	{
-		return false;
+		if (c - w.length() < 0) {
+			return false;
+		}
+		boolean found = true;
+		String[] word = w.split("");
+		for (int i = 0; i < w.length(); i++) {
+			if (!m[r][c-i].equals(word[i])) {
+				found = false;
+			}
+		}
+		return found;	
 	}
 
 	public boolean checkUp(String w, int r, int c)
 	{
-		return false;
+		if (r - w.length() < 0) {
+			return false;
+		}
+		boolean found = true;
+		String[] word = w.split("");
+		for (int i = 0; i < w.length(); i++) {
+			if (!m[r-i][c].equals(word[i])) {
+				found = false;
+			}
+		}
+		return found;	
 	}
 
 	public boolean checkDown(String w, int r, int c)
    {
-	   return false;
+		if (r + w.length() > m[0].length) {
+			return false;
+		}
+		boolean found = true;
+		String[] word = w.split("");
+		for (int i = 0; i < w.length(); i++) {
+			if (!m[r+i][c].equals(word[i])) {
+				found = false;
+			}
+		}
+		return found;	
 	}
 
 	public boolean checkDiagUpRight(String w, int r, int c)
 	{
-		return false;
+		if (c + w.length() > m.length) {
+			return false;
+		}
+		if (r - w.length() < 0) {
+			return false;
+		}
+		boolean found = true;
+		String[] word = w.split("");
+		for (int i = 0; i < w.length(); i++) {
+			if (!m[r-i][c+i].equals(word[i])) {
+				found = false;
+			}
+		}
+		return found;	
 	}
 
 	public boolean checkDiagUpLeft(String w, int r, int c)
 	{
-		return false;
-	}
+		if (c - w.length() < 0) {
+			return false;
+		}
+		if (r - w.length() < 0) {
+			return false;
+		}
+		boolean found = true;
+		String[] word = w.split("");
+		for (int i = 0; i < w.length(); i++) {
+			if (!m[r-i][c-i].equals(word[i])) {
+				found = false;
+			}
+		}
+		return found;		}
 
 	public boolean checkDiagDownLeft(String w, int r, int c)
    {
-		return false;
-	}
+		if (c - w.length() < 0) {
+			return false;
+		}
+		if (r + w.length() > m[0].length) {
+			return false;
+		}
+		boolean found = true;
+		String[] word = w.split("");
+		for (int i = 0; i < w.length(); i++) {
+			if (!m[r+i][c-i].equals(word[i])) {
+				found = false;
+			}
+		}
+		return found;		}
 
 	public boolean checkDiagDownRight(String w, int r, int c)
 	{
-		return false;
-	}
+		if (c + w.length() > m.length) {
+			return false;
+		}
+		if (r + w.length() > m[0].length) {
+			return false;
+		}
+		boolean found = true;
+		String[] word = w.split("");
+		for (int i = 0; i < w.length(); i++) {
+			if (!m[r+i][c+i].equals(word[i])) {
+				found = false;
+			}
+		}
+		return found;		}
 
     public String toString()
     {
