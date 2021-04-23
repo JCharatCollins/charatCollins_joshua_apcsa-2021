@@ -34,5 +34,11 @@ class SpeedUpBall extends Ball
 	   super(x, y, wid, ht, col, xSpd, ySpd);
    }
    
-   
+	public void setXSpeed(int xS) {
+		super.setXSpeed(xS+1);
+	}
+	public void setYSpeed(int yS) {
+		super.setYSpeed(yS+1);
+	}
+
 }
