@@ -103,10 +103,11 @@ public class Block implements Locatable
       window.fillRect(getX(), getY(), getWidth(), getHeight());
    }
 
-   public void draw(Graphics window, Color col)
+   public String draw(Graphics window, Color col)
    {
 	   window.setColor(col);
 	   window.fillRect(getX(), getY(), getWidth(), getHeight());
+	   return getX() + ", " + getY();
    }
    
 	public boolean equals(Object obj)

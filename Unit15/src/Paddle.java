@@ -13,7 +13,7 @@ public class Paddle extends Block
    public Paddle()
    {
 	   super(10,10);
-	   speed =5;
+	   speed = 1;
    }
 
 
@@ -45,16 +45,16 @@ public class Paddle extends Block
 
    public void moveUpAndDraw(Graphics window)
    {
-	   super.draw(window, Color.white);
+	   System.out.println(draw(window, Color.white));
 	   setY(getY()+speed);
-	   super.draw(window, super.getColor());
+	   draw(window, super.getColor());
    }
 
    public void moveDownAndDraw(Graphics window)
    {
-	   super.draw(window, Color.white);
+	   System.out.println(draw(window, Color.white));
 	   setY(getY()-speed);
-	   super.draw(window, super.getColor());
+	   draw(window, super.getColor());
    }
 
    //add get methods

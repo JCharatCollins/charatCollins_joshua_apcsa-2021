@@ -40,6 +40,12 @@ public class Ball extends Block
 		ySpeed = yS;
 	}
 	
+	public Ball(int x, int y, int w, int h, int xS, int yS) {
+		super(x, y, w, h);
+		xSpeed = xS;
+		ySpeed = yS;
+	}
+	
 	   
    //add the set methods
 	public void setXSpeed(int xS) {
